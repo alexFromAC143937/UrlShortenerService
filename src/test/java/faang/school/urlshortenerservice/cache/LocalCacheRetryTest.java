@@ -40,7 +40,7 @@ class LocalCacheRetryTest {
     @Test
     void getCachedHashNoElementInQueueExceptionFailTest() {
         Queue<String> hashes = new ArrayBlockingQueue<>(capacityTest);
-        String message = "There are a lot of requests. Please, try again later.";
+        String message = "There are a lot of requests. Please, try again later...";
 
         when(messageSource.getMessage(eq("exception.cache.empty"), any(), any()))
                 .thenReturn(message);
