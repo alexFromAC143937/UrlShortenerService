@@ -38,7 +38,7 @@ public class LocalCache {
         try {
             hashes.addAll(hashGenerator.getHashes(capacity));
         } catch (IllegalStateException e) {
-            log.error("Error initializing HashCache: capacity: {} Queue is full:", capacity, e);
+            log.error("Error initializing HashCache: capacity: {} Queue is full: ", capacity, e);
         }
     }
 
