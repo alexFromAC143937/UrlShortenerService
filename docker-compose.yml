@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+  redis:
+    image: redis:latest      # Используется официальный образ Redis
+    ports:
+      - "6379:6379"          # Открытие порта 6379 для связи с Redis
