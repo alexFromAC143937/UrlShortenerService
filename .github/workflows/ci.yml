@@ -46,6 +46,7 @@ jobs:
           until redis-cli -h localhost -p 6379 ping; do
             echo "Waiting for Redis..."
             sleep 2 
+          done
 
       - name: Wait for PostgreSQL to be ready
         run: |
